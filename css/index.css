@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 body {
   background-color: hsl(217deg, 54%, 11%);
+  font-family: "Outfit";
 }
 
 main {
@@ -27,11 +29,28 @@ footer {
   width: 300px;
   height: 300px;
   display: block;
-  border: solid 1px red;
   border-radius: 10px;
   background-image: url(../images/image-equilibrium.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.card .card-image .active-states {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.card .card-image .active-states img {
+  visibility: hidden;
+}
+.card .card-image .active-states:hover {
+  cursor: pointer;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+}
+.card .card-image .active-states:hover img {
+  visibility: visible;
 }
 .card .card-body {
   display: flex;
@@ -41,11 +60,50 @@ footer {
 .card .card-body .card-title {
   color: hsl(0deg, 0%, 100%);
 }
+.card .card-body .card-title:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
 .card .card-body .card-text {
   color: hsl(215deg, 51%, 70%);
 }
 .card .card-body .card-footer {
   border-top: solid 1px hsl(215deg, 32%, 27%);
+}
+.card .card-price {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .card-price .price {
+  display: flex;
+  align-items: center;
+  color: hsl(178deg, 100%, 50%);
+  gap: 0.5rem;
+}
+.card .card-price .time {
+  display: flex;
+  align-items: center;
+  color: hsl(215deg, 51%, 70%);
+  gap: 0.5rem;
+}
+.card .card-footer {
+  display: flex;
+  padding: 0.25rem;
+  color: hsl(215deg, 51%, 70%);
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+}
+.card .card-footer img {
+  width: 2.06rem;
+  border: solid 2px white;
+  border-radius: 50%;
+}
+.card .card-footer span:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
 }
 
 /*# sourceMappingURL=index.css.map */
